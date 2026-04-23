@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuronet-ad"
+version = "0.1.0"
+description = "Multi-view Alzheimer's disease classification with MobileNetV3 + attention + CBAM"
+requires-python = ">=3.9"
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "matplotlib",
+    "nibabel",
+    "Pillow",
+    "scikit-learn",
+    "tqdm",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
